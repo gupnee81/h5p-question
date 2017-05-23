@@ -737,13 +737,18 @@ H5P.Question = (function ($, EventDispatcher, JoubelUI) {
       }
 
       // Set text
-      $read.html(readText);
+      setTimeout(function () {
+             $read.html(readText);
+          }, 3500);
+     
 
       setTimeout(function () {
         // Stop combining when done reading
-        readText = null;
-        $read.html('');
-      }, 100);
+      readText = null;
+      $read.html('');
+      }, 5000);
+
+
     };
 
     /**
