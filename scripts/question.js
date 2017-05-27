@@ -737,16 +737,14 @@ H5P.Question = (function ($, EventDispatcher, JoubelUI) {
       }
 
       // Set text
-      setTimeout(function () {
-             $read.html(readText);
-          }, 3500);
-     
+      $read.html(readText);
+ 
 
       setTimeout(function () {
         // Stop combining when done reading
       readText = null;
       $read.html('');
-      }, 5000);
+      }, 100);
 
 
     };
@@ -782,7 +780,6 @@ H5P.Question = (function ($, EventDispatcher, JoubelUI) {
      * @param {string} [helpText] Help text that describes the score inside a tip icon
      */
     self.setFeedback = function (content, score, maxScore, scoreBarLabel, helpText) {
-
       // Feedback is disabled
       if (behaviour.disableFeedback) {
         return self;
